@@ -14,3 +14,12 @@ A query that returns that returns one specific pizza by ID.
 >>> Pizza.objects.filter(id=1)
 <QuerySet [<Pizza: Pizze size: 14, toppings: pizza.Topping.None>]
 ```
+
+I added a couple more pizzas, one with pepperoni.
+
+A query that filters the Pizza objects, and returns only Pepperoni pizzas.
+
+```
+>>> Topping.objects.get(meat="pep").pizza_set.all()
+<QuerySet [<Pizza: Pizze size: 14in, toppings: pizza.Topping.None>]>
+```
